@@ -66,11 +66,52 @@ $cours = [
                     'Science' => [15, 16, 15]]
     ]
     ];
-echo $cours[1]['notes']['Histoire'][2]
+echo $cours[1]['notes']['Histoire'][2];
 
 // -----------------------------------    LES CONDITIONS    -----------------------------------------
 
+$age = 12;
 
+if($age <= 10){
+    echo 'Vous êtes un enfant';
+    if($age < 18){
+        echo 'Vous êtes adolescent';
+    }
+} else {
+    echo 'Vous êtes majeur';
+}
+
+$ages = readline('Entrez votre âge');
+
+if ($ages < 10){
+    echo 'Vous êtes un enfant';    
+} elseif ($age < 18) {
+    echo 'Vous êtes adolescent';   
+} else {
+    echo 'Vous êtes majeur';
+}
+
+// Les opérateurs de comparaison:
+
+// (>) Supérieur; (<) Inférieur; (>=) Supérieur ou égale; (<=) Inférieur ou égale; (!=) Différent; (==) égale; (===) vérifie une égalité
+
+// Attention, le signe (=) est utilisé pour affecter une valeur et non pour comparé une égalité
+
+// Pour convertir une chaîne de caractère ou un nombre:
+// Utilisé (int) pour convertir une chaîne de caractère
+// Utilisé (str) pour convertir un nombre
+
+$action = (int)readline('Veuillez rentrer une commande: (1: Attaque, 2: Défendre, 3: Passe mon tour)');
+
+if ($action === 1){
+    echo 'Je lance mon attaque fétiche ';
+}elseif ($action === 2){
+    echo 'Je défends mes positions ';
+}elseif ($action === 3){
+    echo 'Je passe mon tour, à toi de jouer! ';
+}else{
+    echo 'Commande inconnu, merci de taper un chiffre entre 1 et 3. ';
+}
 
  
 
